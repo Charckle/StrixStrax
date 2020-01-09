@@ -1,6 +1,7 @@
 from pynput.keyboard import Key, KeyCode, Listener
 from key_input import KeyBoardHandler
 from time import sleep
+import datetime
 
 
 print('Strix - An annoying password printer.')
@@ -11,10 +12,13 @@ key_stroker = KeyBoardHandler()
 def function_1():
     print('Pasting password')
     sleep(1)
+
     key_stroker.keyboard.release(Key.ctrl_l)
     key_stroker.keyboard.release(Key.cmd)
     #key_stroker.keyboard.press(Key.backspace)
-    key_stroker.push_keys("Password2019")
+    year = datetime.datetime.now().year
+    key_stroker.push_keys(f"Password{year}")
+    
     
 
 def function_2():
@@ -41,5 +45,12 @@ def on_release(key):
     # When a key is released, remove it from the set of keys we are keeping track of
     current_keys.remove(key)
 
-with Listener(on_press=on_press, on_release=on_release) as listener:
-    listener.join()
+while True:
+    
+    try:
+        with Listener(on_press=on_press, on_release=on_release) as listener:
+            listener.join()
+    
+    except Exception as e:
+        print('something gone wrong???!')
+        print(e)

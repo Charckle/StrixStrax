@@ -1,0 +1,23 @@
+Unhandled exception in listener callback
+Traceback (most recent call last):
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\_util\__init__.py", line 162, in inner
+    return f(self, *args, **kwargs)
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\keyboard\_win32.py", line 243, in _process
+    self.on_release(key)
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\_util\__init__.py", line 78, in inner
+    if f(*args) is False:
+  File "strix.py", line 44, in on_release
+    current_keys.remove(key)
+KeyError: 'r'
+Traceback (most recent call last):
+  File "strix.py", line 47, in <module>
+    listener.join()
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\_util\__init__.py", line 210, in join
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\_util\__init__.py", line 162, in inner
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\keyboard\_win32.py", line 243, in _process
+  File "C:\Users\sia062andzubi\AppData\Local\Continuum\anaconda3\lib\site-packages\pynput-1.4.5-py3.7.egg\pynput\_util\__init__.py", line 78, in inner
+  File "strix.py", line 44, in on_release
+    current_keys.remove(key)
+KeyError: 'r'
